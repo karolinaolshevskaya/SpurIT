@@ -1,1 +1,171 @@
 /* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    --classicRoseColor: #FDCFF3;
+    --goldenTainoiColor: #FFCF56;
+    --mineShaftColor: #2F2F2F;
+    --laPalmaColor: #42940F;
+    --verdunGreenColor: #1F5200;
+    --tundoraColor: #4E4E4E;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F6F6;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.page-title-container {
+    padding: 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards-container {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    width: 380px;
+    height: 481.72px;
+    border-radius: 12px;
+
+    background-color: #fff;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.card__cover {
+    height: 213.75px;
+    min-height: 213.75px;
+    max-height: 213.75px;;
+    padding: 16.33px;
+
+    background-color: black;
+    background-size: cover;
+}
+
+.card__badges {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 17px;
+}
+
+.card__body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    flex: 1;
+}
+
+.card__content {
+    flex: 1;
+
+    padding: 24px;
+}
+
+.card__title {
+    color: var(--mineShaftColor);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.card__text {
+    margin-top: 16px;
+
+    color: var(--mineShaftColor);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.card__footer {
+    padding: 0 24px 24px;
+}
+
+.order-button {
+    width: 100%;
+    height: 48px;
+    border: 2px solid var(--laPalmaColor);
+
+    color: var(--laPalmaColor);
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 8px;
+
+    background-color: transparent;
+}
+
+.order-button:hover {
+    color: white;
+    background-color: var(--laPalmaColor);
+}
+
+.order-button:active {
+    color: white;
+    background-color: var(--verdunGreenColor);
+    border-color: var(--verdunGreenColor);
+}
+
+.order-button:disabled {
+    color: white;
+    background-color: var(--tundoraColor);
+    border-color: var(--tundoraColor);
+}
+
+.badge {
+    display: inline-block;
+
+    border-radius: 8px;
+    padding: 0 16px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    background-color: green;
+}
+
+.badge--pink {
+    background-color: var(--classicRoseColor);
+}
+
+.badge--orange {
+    background-color: var(--goldenTainoiColor);
+}
